@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/assests/todo.js"></script>
+	<link href="/assests/styles.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+	<div class="table">
+		<h1>hello</h1>
+		<form class="todo-form" action="" method="POST">
+			<input type="text" name="item" class="item" placeholder="Add Item"/>
+			 
+			<button class="bttn" type="submit">Submit</button>
+		</form>
+
+	</div>
+	<br>
+	<h1><%= user_id._id %></h1>
+	<ul>
+		
+		<% for(var i=0;i<todos.length;i++){ %>
+		<a href="/todo/"+<%= todos[i].item %>><li><%= todos[i].item %></li></a>
+
+		<%}%>
+	</ul>
+
+
+</body>
+</html>
